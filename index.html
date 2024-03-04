@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coder Chat Forum</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/2ba20532fb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="container mt-24 mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <h1 class="text=[#black] md:font-extrabold md:text-4xl">
+              Coder Chat Forum
+            </h1>
+          </div>
+          <div class="navbar-end hidden lg:flex">
+            <div class="tooltip-wrapper">
+              <ul class="flex flex-row justify-between gap-12">
+                <li>
+                  <a class="bg-[#f8f8f8] rounded-full relative" href="#"
+                    ><i class="fa-solid fa-house"></i>
+                    <div
+                      class="absolute top-[-55px] left-[-20px] bg-black px-4 py-1 text-[#fff] font-bold tooltip"
+                    >
+                      Home
+                    </div></a
+                  >
+                </li>
+                <li>
+                  <a class="bg-[#f8f8f8] rounded-full relative" href="#"
+                    ><i class="fa-solid fa-pencil"></i>
+                    <div
+                      class="absolute top-[-55px] left-[-20px] bg-black px-4 py-1 text-[#fff] font-bold tooltip"
+                    >
+                      Pencil
+                    </div></a
+                  >
+                </li>
+                <li>
+                  <a class="bg-[#f8f8f8] rounded-full relative" href="#"
+                    ><i class="fa-solid fa-user-plus"></i>
+                    <div
+                      class="absolute top-[-55px] left-[-20px] bg-black px-4 py-1 text-[#fff] font-bold tooltip"
+                    >
+                      User
+                    </div></a
+                  >
+                </li>
+                <li>
+                  <a class="bg-[#f8f8f8] rounded-full relative" href="#"
+                    ><i class="fa-regular fa-flag"></i>
+                    <div
+                      class="absolute top-[-55px] left-[-20px] bg-black px-4 py-1 text-[#fff] font-bold tooltip"
+                    >
+                      Flag
+                    </div></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button
+            class="btn btn-active btn-primary md:px-8 rounded-3xl md:font-bold ml-16 md:ml-32 lg:4"
+          >
+            Sign In
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto mt-5">
+      <!-- Banner section start -->
+      <section class="container mt-12 mx-auto">
+        <div class="banner w-full h-[550px] md:h-[650px]">
+          <div class="flex flex-col md:flex-row p-6 md:p-32 gap-6">
+            <div class="w-full md:w-[60%]">
+              <h1
+                class="text-2xl md:text-5xl text-[#fff] font-medium md:font-extrabold ml-11 md:ml-1"
+              >
+                Welcome to the <br />
+              </h1>
+              <h1
+                class="text-2xl md:text-5xl text-[#fff] font-medium md:font-extrabold mt-4 ml-8 md:ml-1"
+              >
+                <span class="text-cyan-200">Coder Chat</span> Forum
+              </h1>
+              <h2
+                class="text-[#fff] mt-4 md:mt-12 md:text-xl md:text-2xl ml-4 md:ml-12 mr-4 md:mr-72"
+              >
+                Share your favorite opinion and win and wp forum coffee mug!
+              </h2>
+              <div
+                class="bg-[#fff] w-full md:w-[400px] p-2 md:p-3 rounded-3xl flex justify-between mt-6 md:mt-20"
+              >
+                <input
+                  id="search-field"
+                  class="w-full"
+                  type="text"
+                  placeholder="Search here anything"
+                />
+                <button
+                  onclick="handleSearch()"
+                  class="btn btn-info md:px-6 md:rounded-2xl"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full md:w-[40%] md:h-96 bg-white flex flex-row justify-around items-center rounded-3xl"
+            >
+              <div>
+                <p class="text-xl">Registered Users</p>
+                <p class="text-xl mt-4">Forum</p>
+                <p class="text-xl mt-4">Topics</p>
+                <p class="text-xl mt-4">Replies</p>
+              </div>
+              <div>
+                <p class="text-xl mt-4">01</p>
+                <p class="text-xl mt-4">01</p>
+                <p class="text-xl mt-4">01</p>
+                <p class="text-xl mt-4">01</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner section end -->
+
+      <!-- Let,s Discuss section start  -->
+      <section>
+        <div>
+          <!-- title div -->
+
+          <div class="text-center mt-5 md:mt-24">
+            <h1 class="text-2xl md:text-5xl md:font-extrabold">
+              Let’s Discuss
+            </h1>
+            <p class="mt-2 md:mt-6 w-[90%] md:w-[60%] mx-auto text-xl">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-2 md:gap-6 mt-11 md:mt-24">
+            <!-- post div -->
+            <!-- loader spinner -->
+            <div id="loading" class="text-center my-60 hidden">
+              <span class="loading loading-spinner text-warning"></span>
+              <span class="loading loading-spinner text-warning"></span>
+              <span class="loading loading-spinner text-warning"></span>
+            </div>
+            <div id="post-container" class="md:w-[75%]">
+              <!-- <div class="card card-side shadow-xl md:pt-10 md:pl-12">
+                <div class="mt-8 relative">
+                  <figure>
+                    <img
+                      class="w-24 h-24 rounded-3xl"
+                      src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                      alt="Movie"
+                    />
+                  </figure>
+                </div>
+                <div
+                  class="w-6 h-6 bg-lime-500 rounded-full absolute top-6 left-20 md:top-16 md:left-32"
+                ></div>
+                <div class="card-body">
+                  <div class="flex flex-col md:flex-row md:mr-[640px] mb-2">
+                    <p class="md:text-xl md:font-bold">#Music</p>
+                    <p class="md:text-xl md:font-bold">Author: Awlad Hossain</p>
+                  </div>
+                  <h2 class="card-title md:text-2xl font-bold mb-4 md:mb-6">
+                    10 Kids Unaware of Their Halloween Costume
+                  </h2>
+                  <p
+                    class="md:text-xl font-medium mr-8 border-b-2 border-gray-900 border-dashed pb-6"
+                  >
+                    It’s one thing to subject yourself to ha Halloween costume
+                    mishap because, hey that’s your prerogative
+                  </p>
+
+                  <div
+                    class="flex flex-col md:flex-row justify-between items-center mr-10 gap-3"
+                  >
+                    <div
+                      class="flex flex-col md:flex-row gap-6 md:gap-12 mt-4 md:mt-8"
+                    >
+                      <p>
+                        <i class="fa-regular fa-message"></i> <span>560</span>
+                      </p>
+                      <p>
+                        <i class="fa-regular fa-eye"></i> <span>1,568</span>
+                      </p>
+                      <p>
+                        <i class="fa-regular fa-clock"></i> <span> 5</span> Min
+                      </p>
+                    </div>
+                    <button class="btn rounded-3xl bg-lime-400">
+                      <i class="fa-regular fa-envelope-open"></i>
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <!-- Mark as read div -->
+            <div class="md:w-[25%] bg-indigo-50 rounded-2xl pt-6 pl-8 pr-8">
+              <div class="flex flex-col md:flex-row justify-between mt-6">
+                <p class="text-2xl font-bold">Title</p>
+                <p class="text-2xl">
+                  <i class="fa-solid fa-check-double text-lime-400"></i> Mark as
+                  read
+                  <span>( 4 )</span>
+                </p>
+              </div>
+              <div class="flex flex-row justify-between bg-[#fff] rounded-3xl">
+                <!-- title -->
+                <div class="flex flex-row justify-between">
+                  <div id="post-title"></div>
+                  <div class="post-view"></div>
+                </div>
+
+                <!-- view -->
+                <!-- <div class=""></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Let,s Discuss section end  -->
+
+      <!-- Join our forum section start -->
+      <section>
+        <div
+          class="our-forum w-full mt-6 md:mt-44 rounded-3xl flex flex-col md:flex-row justify-between p-12 gap-8"
+        >
+          <div>
+            <p class="text-4xl font-extrabold text-[#fff] md:mt-20 md:ml-20">
+              Join Our Forum
+            </p>
+            <p class="text-[#fff] font-medium md:ml-20 md:mt-8">
+              Share your favorite opinion and win and wp forum coffee mug! Yes,
+              you can run unit tests and view the results directly within the
+              app.
+            </p>
+            <button
+              class="btn bg-sky-400 rounded-3xl text-[#fff] px-6 mt-5 md:mt-10 md:ml-20"
+            >
+              Registered Now
+            </button>
+          </div>
+          <div>
+            <img src="./images/joinforum.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- Join our forum section end -->
+
+      <!-- Latest Posts section start -->
+      <section>
+        <div class="mt-6 md:mt-28">
+          <!-- title div  -->
+          <div>
+            <h2 class="text-5xl font-extrabold mb-4 text-center">
+              Latest Posts
+            </h2>
+            <p class="text-xl font-medium text-center">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+          <!-- post div  -->
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div
+              id="post-div"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12"
+            >
+              <!-- <div
+            class="pt-2 md:pt-8 pb-2 md:pb-8 md:pl-16 bg-slate-100 rounded-3xl"
+          >
+            <div class="card md:w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p>
+                  <i class="fa-regular fa-calendar-days"></i> 29 January 2024
+                </p>
+                <p class="text-xl font-bold mb-3">
+                  What will a mars habitat force that impact in our daily
+                  life!!!
+                </p>
+                <p class="mb-3">
+                  Yes, you can run unit tests and view the results directly
+                  within the app.
+                </p>
+                <div class="card-actions justify-start">
+                  <div>
+                    <img src="./images/logo.png" alt="" />
+                  </div>
+                  <div>
+                    <p class="text-xl font-bold">Cameron Williamson</p>
+                    <p>Unknown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+            </div>
+            <div
+              id="post-div2"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12"
+            >
+              <!-- <div
+            class="pt-2 md:pt-8 pb-2 md:pb-8 md:pl-16 bg-slate-100 rounded-3xl"
+          >
+            <div class="card md:w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p>
+                  <i class="fa-regular fa-calendar-days"></i> 29 January 2024
+                </p>
+                <p class="text-xl font-bold mb-3">
+                  What will a mars habitat force that impact in our daily
+                  life!!!
+                </p>
+                <p class="mb-3">
+                  Yes, you can run unit tests and view the results directly
+                  within the app.
+                </p>
+                <div class="card-actions justify-start">
+                  <div>
+                    <img src="./images/logo.png" alt="" />
+                  </div>
+                  <div>
+                    <p class="text-xl font-bold">Cameron Williamson</p>
+                    <p>Unknown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+            </div>
+            <div
+              id="post-div3"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12"
+            >
+              <!-- <div
+            class="pt-2 md:pt-8 pb-2 md:pb-8 md:pl-16 bg-slate-100 rounded-3xl"
+          >
+            <div class="card md:w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p>
+                  <i class="fa-regular fa-calendar-days"></i> 29 January 2024
+                </p>
+                <p class="text-xl font-bold mb-3">
+                  What will a mars habitat force that impact in our daily
+                  life!!!
+                </p>
+                <p class="mb-3">
+                  Yes, you can run unit tests and view the results directly
+                  within the app.
+                </p>
+                <div class="card-actions justify-start">
+                  <div>
+                    <img src="./images/logo.png" alt="" />
+                  </div>
+                  <div>
+                    <p class="text-xl font-bold">Cameron Williamson</p>
+                    <p>Unknown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Latest Posts section end -->
+    </main>
+    <footer class="mt-16">
+      <footer
+        class="footer footer-center p-10 bg-base-200 text-base-content rounded"
+      >
+        <h2 class="text-6xl font-extrabold">Coder Chat</h2>
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path></svg
+            ></a>
+            <a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path></svg
+            ></a>
+            <a
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path></svg
+            ></a>
+          </div>
+        </nav>
+        <div class="w-[80%] h-[1px] bg-black opacity-15"></div>
+        <aside>
+          <p>Copyright © 2024 - All right reserved by Coder Chat</p>
+        </aside>
+      </footer>
+    </footer>
+    <script src="./js script/coder.js"></script>
+  </body>
+</html>

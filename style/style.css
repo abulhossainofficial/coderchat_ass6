@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tooltip-wrapper ul li .tooltip {
+  display: none;
+}
+
+.tooltip-wrapper ul li a:hover .tooltip {
+  display: block;
+}
+
+.banner {
+  /* width: auto;
+  height: 750px;
+  margin: 60px auto; */
+  background-image: url(../images/bgbanner.png);
+  background-color: #12132d;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  border-radius: 42px;
+  -webkit-border-radius: 42px;
+  -moz-border-radius: 42px;
+  -ms-border-radius: 42px;
+  -o-border-radius: 42px;
+}
+
+.our-forum {
+  /* background-image: url(../images/joinforum.png); */
+  background-color: #12132d;
+  /* background-repeat: no-repeat; */
+  /* background-position: right; */
+}
